@@ -11,7 +11,14 @@ request.onload = function() {
   if (request.status >= 200 && request.status < 400) {
     data.forEach(movie => {
         // Log each movie's title
+        // Create a div with a card class
+        const card = document.createElement('div')
+        card.setAttribute('class', 'card')
+          // Create an h1 and set the text content to the film's title
+        const h1 = document.createElement('h1')
+        h1.textContent = movie.title
       console.log(movie.title)
+      console.log(movie.description)
     })
   } else {
     console.log('error')
@@ -22,3 +29,25 @@ request.onload = function() {
 request.send()
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+const app = document.getElementById('root')
+
+const logo = document.createElement('img')
+logo.src = 'logo.png'
+
+const container = document.createElement('div')
+container.setAttribute('class', 'container')
+
+app.appendChild(logo)
+app.appendChild(container)
